@@ -1,0 +1,9 @@
+*.iml
+.idea
+.jqwik-database
+.run
+dependency-reduced-pom.xml
+node
+node_modules
+pom.xml.versionsBackup
+target

@@ -1,0 +1,12 @@
+#!/bin/sh
+
+if [ -z "${SOFTPAGE_HOME}" ]
+then
+  echo "SOFTPAGE_HOME is unset" 1>&2
+  exit 1
+fi
+
+exec /usr/bin/env java \
+-p "${SOFTPAGE_HOME}/lib" \
+-m com.io7m.softpage.cmdline/com.io7m.softpage.cmdline.SPMain \
+"$@"

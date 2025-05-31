@@ -1,0 +1,153 @@
+body {
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  font-size: 14px;
+  height: 100%;
+  line-height: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin-block: 0 16px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-block-start: 0;
+  margin-bottom: 16px;
+}
+
+h2 {
+  font-size: 22px;
+  margin-block-start: 0;
+  margin-bottom: 16px;
+}
+
+h3 {
+  font-size: 20px;
+  margin-block-start: 0;
+  margin-bottom: 16px;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #ddd;
+  margin-bottom: 16px;
+}
+
+a {
+  font-size: 13px;
+  font-family: monospace;
+}
+
+a:link    { color: #00f; }
+a:visited { color: #005; }
+a:hover   { color: #00f; }
+a:active  { color: #00f; }
+
+th {
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+td {
+  vertical-align: top;
+  padding-right: 16px;
+}
+
+table {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.softpage-container {
+  padding:   32px;
+  max-width: 1056px;
+  margin:    0 auto;
+}
+
+.softpage-pre {
+
+}
+
+pre {
+  border: 1px solid #ccc;
+  padding: 16px;
+}
+
+/*
+ * Main elements.
+ */
+
+header {
+  border: 1px solid #000;
+  padding: 16px;
+}
+
+main {
+  display: flex;
+  flex-flow: column;
+  flex-grow: 1;
+  flex-shrink: 0;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+}
+
+section {
+  margin: 0;
+  background-color: #fff;
+}
+
+section.softpage-section-top-level {
+  padding: 16px;
+  border-bottom: 1px solid #000;
+}
+
+footer {
+  font-family: monospace;
+  padding: 16px;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  background-color: #fff;
+}
+
+.softpage-changes {
+  font-size: 13px;
+  font-family: monospace;
+}
+.softpage-changes td:nth-child(1) {
+  padding-right: 16px;
+}
+
+.softpage-icon {
+  margin-right: 16px;
+}
+.softpage-header-title-container {
+  display: flex;
+  margin-bottom: 16px;
+}
+.softpage-header-link {
+  font-size: 13px;
+  font-family: monospace;
+  margin-bottom: 16px;
+}
+.softpage-header-shields {
+  display: flex;
+}
+.softpage-header-shields a {
+  margin-right: 8px;
+}
+.softpage-banner {
+  margin-bottom: 32px;
+}
+.softpage-banner img {
+  border: 1px solid #000;
+}
