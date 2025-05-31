@@ -84,7 +84,6 @@ pre {
 
 header {
   border: 1px solid #000;
-  padding: 16px;
 }
 
 main {
@@ -127,20 +126,36 @@ footer {
   padding-right: 16px;
 }
 
+.softpage-header-content {
+
+}
 .softpage-icon {
-  margin-right: 16px;
+
 }
 .softpage-header-title-container {
   display: flex;
-  margin-bottom: 16px;
+  margin-left: 16px;
+}
+.softpage-header-title-container h1 {
+  margin-bottom: 0px;
+  margin-left: 16px;
+}
+.softpage-header-title-container span {
+  font-weight: bold;
 }
 .softpage-header-link {
+  margin-top: 8px;
+  margin-left: 16px;
+  margin-bottom: 16px;
   font-size: 13px;
   font-family: monospace;
-  margin-bottom: 16px;
 }
 .softpage-header-shields {
   display: flex;
+  justify-content: center;
+  margin-left: 16px;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 .softpage-header-shields a {
   margin-right: 8px;
@@ -150,4 +165,54 @@ footer {
 }
 .softpage-banner img {
   border: 1px solid #000;
+}
+
+/*
+ * Navigation.
+ */
+
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  overflow: auto hidden;
+  color: #000;
+  background-color: #000;
+  border: 1px solid #000;
+}
+
+ul.softpage-navigation {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  grid-auto-flow: column;
+  height: 64px;
+  margin: 0;
+  padding: 0;
+}
+
+ul.softpage-navigation > li {
+  list-style: none;
+  width: 128px;
+  height: 32px;
+  vertical-align: top;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+ul.softpage-navigation > li > a {
+  display: block;
+  line-height: 32px;
+  width: 100%;
+  font-family: monospace;
+  font-size: 13px;
+  color: #fff;
+}
+
+ul.softpage-navigation > li > a:hover {
+  background-color: #fff;
+  color: #000;
 }

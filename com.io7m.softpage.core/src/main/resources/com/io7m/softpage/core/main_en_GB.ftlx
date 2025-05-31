@@ -17,43 +17,56 @@
           / software /
           <a href="https://www.io7m.com/software/${Project.ShortName}">${Project.ShortName}</a>
         </div>
-        <div class="softpage-header-title-container">
-          <img alt="Project icon" class="softpage-icon" height="64" src="icon.png" width="64"/>
-          <div>
-            <h1>${Project.Name}</h1>
-            <span>${Project.Description}</span>
+        <div class="softpage-header-content">
+          <div class="softpage-header-title-container">
+            <img alt="Project icon" class="softpage-icon" height="64" src="icon.png" width="64"/>
+            <div>
+              <h1>${Project.Name}</h1>
+              <div class="softpage-header-shields">
+                <#list Shields as Shield>
+                <#switch Shield>
+                <#on "SHIELD_BUILD_STATUS">
+                <a href="${Project.GitHubRepos}/actions?query=workflow%3Amain.linux.temurin.lts">
+                  <img alt="Build status"
+                       src="https://img.shields.io/github/actions/workflow/status/${Project.GitHubPath}/main.linux.temurin.lts.yml"/>
+                </a>
+                <#on "SHIELD_MAVEN_CENTRAL">
+                <a href="https://search.maven.org/#search%7Cga%7C1%7Cg%3A%22${Project.ArtifactID}%22" title="Maven Central">
+                  <img alt="Maven Central Version"
+                       src="https://img.shields.io/maven-central/v/${Project.GroupID}/${Project.ArtifactID}.svg?style=flat-square"/>
+                </a>
+                <#on "SHIELD_CODECOV">
+                <a href="https://codecov.io/gh/${Project.GitHubPath}">
+                   <img alt="Codecov"
+                        src="https://img.shields.io/codecov/c/github/${Project.GitHubPath}.svg?style=flat-square"/>
+                </a>
+                <#on "SHIELD_FDROID">
+                <a href="https://f-droid.org/en/packages/com.io7m.exfilac.main/">
+                  <img alt="F-Droid"
+                       src="https://img.shields.io/f-droid/v/com.io7m.exfilac.main?style=for-the-badge"/>
+                </a>
+                <#on "SHIELD_LIBERAPAY">
+                <a href="https://liberapay.com/io7m/donate">
+                  <img alt="Liberapay"
+                       src="https://liberapay.com/assets/widgets/donate.svg"/>
+                </a>
+                </#switch>
+                </#list>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="softpage-header-shields">
-          <#list Shields as Shield>
-          <#switch Shield>
-          <#on "SHIELD_BUILD_STATUS">
-          <a href="${Project.GitHubRepos}/actions?query=workflow%3Amain.linux.temurin.lts">
-            <img alt="Build status"
-                 src="https://img.shields.io/github/actions/workflow/status/${Project.GitHubPath}/main.linux.temurin.lts.yml"/>
-          </a>
-          <#on "SHIELD_MAVEN_CENTRAL">
-          <a href="https://search.maven.org/#search%7Cga%7C1%7Cg%3A%22${Project.ArtifactID}%22" title="Maven Central">
-            <img alt="Maven Central Version"
-                 src="https://img.shields.io/maven-central/v/${Project.GroupID}/${Project.ArtifactID}.svg?style=flat-square"/>
-          </a>
-          <#on "SHIELD_CODECOV">
-          <a href="https://codecov.io/gh/${Project.GitHubPath}">
-             <img alt="Codecov"
-                  src="https://img.shields.io/codecov/c/github/${Project.GitHubPath}.svg?style=flat-square"/>
-          </a>
-          <#on "SHIELD_FDROID">
-          <a href="https://f-droid.org/en/packages/com.io7m.exfilac.main/">
-            <img alt="F-Droid"
-                 src="https://img.shields.io/f-droid/v/com.io7m.exfilac.main?style=for-the-badge"/>
-          </a>
-          <#on "SHIELD_LIBERAPAY">
-          <a href="https://liberapay.com/io7m/donate">
-            <img alt="Liberapay"
-                 src="https://liberapay.com/assets/widgets/donate.svg"/>
-          </a>
-          </#switch>
-          </#list>
+          <nav aria-label="Main navigation">
+            <ul class="softpage-navigation">
+              <li><a href="#softpage-overview">Overview</a></li>
+              <li><a href="#softpage-release-info">Releases</a></li>
+              <li><a href="#softpage-documentation-info">Documentation</a></li>
+              <li><a href="#softpage-scm">SCM</a></li>
+              <li><a href="#softpage-issues">Issues</a></li>
+              <li><a href="#softpage-dependency-info">Dependencies</a></li>
+              <li><a href="#softpage-changes-info">Changes</a></li>
+              <li><a href="#softpage-license">License</a></li>
+            </ul>
+          </nav>
         </div>
       </header>
 
