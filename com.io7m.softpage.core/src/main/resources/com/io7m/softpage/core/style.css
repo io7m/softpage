@@ -127,13 +127,27 @@ footer {
 }
 
 .softpage-header-content {
-
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: start;
+  width: 100%;
+  border-top: 1px solid #000;
+  padding-top: 16px;
+  padding-top: 16px;
 }
 .softpage-icon {
 
 }
+.softpage-header-title-and-shields {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .softpage-header-title-container {
   display: flex;
+  width: calc(4 * 128px);
+  margin-bottom: 16px;
   margin-left: 16px;
 }
 .softpage-header-title-container h1 {
@@ -146,16 +160,15 @@ footer {
 .softpage-header-link {
   margin-top: 8px;
   margin-left: 16px;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   font-size: 13px;
   font-family: monospace;
 }
 .softpage-header-shields {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  align-items: flex-end;
   margin-left: 16px;
-  margin-top: 16px;
-  margin-bottom: 16px;
 }
 .softpage-header-shields a {
   margin-right: 8px;

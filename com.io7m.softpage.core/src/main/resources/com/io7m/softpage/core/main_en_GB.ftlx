@@ -20,7 +20,7 @@
         <div class="softpage-header-content">
           <div class="softpage-header-title-container">
             <img alt="Project icon" class="softpage-icon" height="64" src="icon.png" width="64"/>
-            <div>
+            <div class="softpage-header-title-and-shields">
               <h1>${Project.Name}</h1>
               <div class="softpage-header-shields">
                 <#list Shields as Shield>
