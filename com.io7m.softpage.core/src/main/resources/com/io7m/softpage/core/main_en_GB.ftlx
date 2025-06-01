@@ -145,7 +145,7 @@
           <p>
             Repository: <a href="${Project.GitHubRepos}">${Project.GitHubRepos}</a>
           </p>
-          <div class="softpage-pre"><pre>$ git clone --recursive ${Project.GitHubRepos}</pre></div>
+          <pre>$ git clone --recursive ${Project.GitHubRepos}</pre>
         </section>
 
         <section id="softpage-issues" class="softpage-section-top-level">
@@ -164,7 +164,7 @@
             own projects, the project defines a bill-of-materials module that
             can be used as a Maven dependency directly:
           </p>
-          <div class="softpage-pre"><pre>
+          <pre>
 &lt;dependency&gt;
   &lt;groupId&gt;<a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22${Project.GroupID}%22">${Project.GroupID}</a>&lt;/groupId&gt;
   &lt;artifactId&gt;<a href="http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22${Project.BOM}%22">${Project.BOM}</a>&lt;/artifactId&gt;
@@ -172,14 +172,14 @@
   &lt;scope&gt;import&lt;/scope&gt;
   &lt;type&gt;pom&lt;/type&gt;
 &lt;/dependency&gt;
-          </pre></div>
+          </pre>
           </#if>
           <#if Project.Modules?size gt 0>
           <p>
             The project consists of the following set of modules that can be
             used individually, expressed as Maven dependency declarations:
           </p>
-          <div class="softpage-pre"><pre>
+          <pre>
           <#list Project.Modules as Module>
 &lt;dependency&gt;
   &lt;groupId&gt;<a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22${Project.GroupID}%22">${Project.GroupID}</a>&lt;/groupId&gt;
@@ -187,18 +187,18 @@
   &lt;version&gt;<a href="http://search.maven.org/#artifactdetails%7C${Project.GroupID}%7C${Module.ArtifactID}%7C${Project.Version}%7Cjar">${Project.Version}</a>&lt;/version&gt;
 &lt;/dependency&gt;
           </#list>
-          </pre></div>
+          </pre>
           <#else>
           <p>
             The project consists of a single module that can be used directly:
           </p>
-          <div class="softpage-pre"><pre>
+          <pre>
 &lt;dependency&gt;
   &lt;groupId&gt;<a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22${Project.GroupID}%22">${Project.GroupID}</a>&lt;/groupId&gt;
   &lt;artifactId&gt;<a href="http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22${Project.ArtifactID}%22">${Project.ArtifactID}</a>&lt;/artifactId&gt;
   &lt;version&gt;<a href="http://search.maven.org/#artifactdetails%7C${Project.GroupID}%7C${Project.ArtifactID}%7C${Project.Version}%7Cjar">${Project.Version}</a>&lt;/version&gt;
 &lt;/dependency&gt;
-          </pre></div>
+          </pre>
           </#if>
         </section>
 
@@ -241,7 +241,7 @@
 
         <section id="softpage-license" class="softpage-section-top-level">
           <h2>License</h2>
-          <div class="softpage-pre"><pre>${Project.LicenseText}</pre></div>
+          <pre>${Project.LicenseText}</pre>
         </section>
       </main>
 

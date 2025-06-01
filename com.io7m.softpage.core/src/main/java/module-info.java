@@ -23,11 +23,14 @@ module com.io7m.softpage.core
   requires static org.osgi.annotation.bundle;
   requires static org.osgi.annotation.versioning;
 
+  requires com.fasterxml.jackson.core;
+  requires com.fasterxml.jackson.databind;
   requires com.io7m.changelog.core;
   requires com.io7m.changelog.parser.api;
   requires com.io7m.changelog.xml.api;
   requires com.io7m.changelog.xml.vanilla;
   requires com.io7m.jlexing.core;
+  requires com.io7m.jmulticlose.core;
   requires com.io7m.jproperties.core;
   requires com.io7m.seltzer.api;
   requires com.io7m.verona.core;
@@ -42,4 +45,5 @@ module com.io7m.softpage.core
   requires org.jetbrains.annotations;
 
   exports com.io7m.softpage.core;
+  exports com.io7m.softpage.core.internal;
 }

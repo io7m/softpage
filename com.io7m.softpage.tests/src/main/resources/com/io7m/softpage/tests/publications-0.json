@@ -1,0 +1,11 @@
+{
+  "WorkDirectory": "/tmp/work",
+  "TargetHost": "example.com:data/",
+  "Concurrency": 8,
+  "Projects": [
+    {
+      "Name": "abstand",
+      "GitRepository": "https://github.com/io7m-com/abstand"
+    }
+  ]
+}

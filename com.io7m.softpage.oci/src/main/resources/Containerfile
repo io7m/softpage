@@ -1,0 +1,18 @@
+FROM docker.io/library/alpine:${com.io7m.oci.versionAlpine}
+FROM docker.io/library/eclipse-temurin:${com.io7m.oci.versionTemurin}
+
+ENV PATH="/softpage/bin:/sbin:/bin:/usr/sbin:/usr/bin:/opt/java/openjdk/bin"
+ENV SOFTPAGE_HOME="/softpage"
+
+COPY softpage /softpage
+
+LABEL "org.opencontainers.image.authors"="Mark Raynsford"
+LABEL "org.opencontainers.image.description"="Software site generator."
+LABEL "org.opencontainers.image.licenses"="ISC"
+LABEL "org.opencontainers.image.source"="https://www.github.com/io7m-com/softpage"
+LABEL "org.opencontainers.image.title"="Softpage"
+LABEL "org.opencontainers.image.url"="https://www.io7m.com/software/softpage"
+LABEL "org.opencontainers.image.version"="${project.version}"
+LABEL "org.opencontainers.image.revision"="${buildNumber}"
+
+ENTRYPOINT ["/softpage/bin/softpage"]

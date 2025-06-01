@@ -45,6 +45,7 @@
     <module>com.io7m.softpage.cmdline</module>
     <module>com.io7m.softpage.core</module>
     <module>com.io7m.softpage.distribution</module>
+    <module>com.io7m.softpage.oci</module>
     <module>com.io7m.softpage.tests</module>
   </modules>
 
@@ -222,6 +223,11 @@
         <groupId>org.freemarker</groupId>
         <artifactId>freemarker</artifactId>
         <version>2.3.34</version>
+      </dependency>
+      <dependency>
+        <groupId>com.io7m.jmulticlose</groupId>
+        <artifactId>com.io7m.jmulticlose.core</artifactId>
+        <version>1.1.3</version>
       </dependency>
 
       <dependency>

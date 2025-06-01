@@ -21,6 +21,7 @@ import com.io7m.quarrel.core.QApplication;
 import com.io7m.quarrel.core.QApplicationMetadata;
 import com.io7m.quarrel.core.QApplicationType;
 import com.io7m.softpage.cmdline.internal.SPCmdGenerate;
+import com.io7m.softpage.cmdline.internal.SPCmdPublish;
 import com.io7m.softpage.core.SPVersion;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -68,6 +69,7 @@ public final class SPMain implements Runnable
     final var builder = QApplication.builder(metadata);
     builder.allowAtSyntax(true);
     builder.addCommand(new SPCmdGenerate());
+    builder.addCommand(new SPCmdPublish());
 
     this.application = builder.build();
     this.exitCode = 0;
